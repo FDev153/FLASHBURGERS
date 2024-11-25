@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CardGroup } from 'reactstrap';
 import Producto from './producto';
 
+
 export default function Catalogo(props) {
 
   useEffect(() => {
@@ -12,6 +13,12 @@ export default function Catalogo(props) {
   }, []);
 
   const listabuena = props.producto.filter(v => v.id_categoria == props.id)
+
+  const añadiraqui = (nombre, precio, contador, id) => {
+    if (nombre != '' && precio != '' && contador != 0) {
+      props.añadire(nombre, precio, contador, id)
+    }
+  }
 
   let titulo = <></>
   switch (props.id) {
@@ -30,6 +37,7 @@ export default function Catalogo(props) {
     case 5:
       titulo = <h1 className='titulo'>Salsas</h1>
       break;
+
     default:
       break;
   }
@@ -37,6 +45,7 @@ export default function Catalogo(props) {
     <>
      {titulo}
       <CardGroup id='grupo'>
+      
         {listabuena.map(v => (
           <Producto
             id_cat={v.id_categoria}
@@ -46,10 +55,11 @@ export default function Catalogo(props) {
             des={v.descripcion}
             precio={v.precio}
             ing={props.ingrediente}
-            
+            añadire={(n, p, c, id) => añadiraqui(n, p, c, id)}
           />
         ))}
       </CardGroup>
     </>
+
   );
 }

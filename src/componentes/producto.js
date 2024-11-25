@@ -15,6 +15,8 @@ export default function Producto(props) {
     const [ingbien, setIngrebien] = useState([]);
     const [ing, setIng] = useState(false);
 
+
+
     const masomenos = (que) => {
         if (que === 's') {
             setContador(contador + 1); // Incrementar el contador utilizando setContador
@@ -59,12 +61,13 @@ export default function Producto(props) {
 
     return (
         <>
+            
             <Card id='pro'>
                 <CardImg
                     alt="Card image cap"
                     src={`${process.env.PUBLIC_URL}/${props.img}`}
                     top
-                    width="80%"
+                    width="100%"
                 />
                 <CardBody>
                     <CardTitle tag="h5">
@@ -86,7 +89,7 @@ export default function Producto(props) {
                         {props.precio}€
                     </CardSubtitle>
                     <Button color='danger' onClick={() => masomenos('r')}>-</Button>{contador}<Button color='danger' onClick={() => masomenos('s')}>+</Button>
-                    <Button color='info' >
+                    <Button color='info' onClick={() => props.añadire(props.nombre, props.precio, contador, props.id_pro)}>
                         Añadir
                     </Button>
                 </CardBody>
