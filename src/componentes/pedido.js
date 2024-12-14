@@ -1,4 +1,5 @@
-import React from 'react';
+import { Card, CardBody, CardSubtitle, CardText, CardTitle } from 'reactstrap';
+
 export default function Catalogo(props) {
   
 
@@ -6,7 +7,6 @@ export default function Catalogo(props) {
     <Card>
             <CardBody>
                 <CardTitle tag="h5">
-                    
                 </CardTitle>
                 <CardText>
                     {props.des}
@@ -24,7 +24,7 @@ export default function Catalogo(props) {
                     {props.precio}€
                 </CardSubtitle>
                 <Button color='danger' onClick={() => masomenos('r')}>-</Button>{contador}<Button color='danger' onClick={() => masomenos('s')}>+</Button>
-                <Button color='info'>
+                <Button color='info' onClick={() => props.añadir(props.nombre, props.precio, contador)}>
                     Añadir
                 </Button>
             </CardBody>
