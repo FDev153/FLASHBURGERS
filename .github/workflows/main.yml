@@ -12,6 +12,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write  # Permiso para escritura en los contenidos del repositorio
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -24,7 +27,6 @@ jobs:
     - name: Install dependencies
       run: |
         npm install
-        sudo chown -R $USER:$GROUP node_modules  # Asegurarse de que los permisos sean correctos
 
     - name: Run tests
       run: npm test
