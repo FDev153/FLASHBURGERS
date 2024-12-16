@@ -22,7 +22,9 @@ jobs:
         node-version: 20
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        npm install
+        sudo chown -R $USER:$GROUP node_modules  # Asegurarse de que los permisos sean correctos
 
     - name: Run tests
       run: npm test
