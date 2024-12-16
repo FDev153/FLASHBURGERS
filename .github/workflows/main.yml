@@ -27,6 +27,10 @@ jobs:
     - name: Install dependencies
       run: |
         npm install
+        sudo chown -R $USER:$USER .  # Asegurarse de que todos los archivos sean propiedad del usuario
+        sudo chmod -R 755 ./node_modules/.bin  # Asegurarse de que los scripts sean ejecutables
 
     - name: Run tests
-      run: npm test
+      run: |
+        sudo chmod -R 755 node_modules/.bin  # Dar permisos de ejecución a los scripts
+        npm test
