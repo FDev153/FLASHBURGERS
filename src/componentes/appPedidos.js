@@ -158,6 +158,26 @@ class AppPedidos extends Component {
   //esto es una alerta con un pluggin que llama a la ventana cuando finaliza la compra y te da la opcion de cancelar el pedido o ver los detalles del pedido
   SweetAlert2(id, datos) {
 
+    let nombre = '';
+    let telefono = '';
+    let productos = '';
+    let precio = '';
+    let estado = '';
+    let idp = '';
+    let dire = '';
+    let pedi = '';
+
+    datos.map((t) => {
+      nombre = t.nombre;
+      telefono = t.telefono;
+      productos += `<li>${t.producto_nombre} : ${t.cantidad}</li>`;
+      precio = t.precio;
+      estado = t.estado;
+      idp = t.id_pedido;
+      dire = t.direccion && t.direccion.trim() !== "" ? t.direccion : "";
+      pedi = t.takeaway === '0' ? "Recogida en local" : "Envio a casa";
+    });
+
     Swal.fire({
       title: "Pedido realizado con éxito!",
       text: "Confirme el pedido para continuar.",
@@ -173,25 +193,7 @@ class AppPedidos extends Component {
       allowOutsideClick: false,
     }).then((result) => {
       if (result.isConfirmed) {
-        let nombre = '';
-        let telefono = '';
-        let productos = '';
-        let precio = '';
-        let estado = '';
-        let idp = '';
-        let dire = '';
-        let pedi = '';
 
-        datos.map((t) => {
-          nombre = t.nombre;
-          telefono = t.telefono;
-          productos += `<li>${t.producto_nombre} : ${t.cantidad}</li>`;
-          precio = t.precio;
-          estado = t.estado;
-          idp = t.id_pedido;
-          dire = t.direccion && t.direccion.trim() !== "" ? t.direccion : "";
-          pedi = t.takeaway === '0' ? "Recogida en local" : "Envio a casa";
-        });
 
 
         Swal.fire({
