@@ -137,11 +137,6 @@ class AppPedidos extends Component {
       });
   }
 
-
-
-
-
-
   //aqui me traigo el json de todos los productos
   productos() {
     axios.get(PHPSENTENCIAS)
@@ -320,10 +315,7 @@ class AppPedidos extends Component {
     this.setState({ logo: true, carrito: [], cantidadTotal: 0, precioTotal: 0, show: false, lp: false });
   }
 
-
-
   render() {
-
     return (
       <div className='general'>
         <div className='menu-comida'>
