@@ -1,3 +1,4 @@
+//Carrusel de imagenes en la pagina principal
 import './menu.css';
 
 const Carrusel = () => {

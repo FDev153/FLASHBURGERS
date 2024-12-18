@@ -1,3 +1,4 @@
+// Se muestra el carrito de los productos que se vayan a comprar con sus respectivas cantidades y precios
 import React, { useState } from 'react';
 import { Button, Input, Label, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap'
 import "../App.css";

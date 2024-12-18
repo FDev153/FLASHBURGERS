@@ -1,3 +1,4 @@
+// Estructuracion de la card de producto conjunto el listado de ingredientes de cada producto
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect, useState } from 'react';
 import {

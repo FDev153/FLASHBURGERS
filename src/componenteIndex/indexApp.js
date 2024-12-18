@@ -1,3 +1,4 @@
+//Componente principal en el cual se llaman a los demas para la estructuración
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './menu'; 

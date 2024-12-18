@@ -1,3 +1,4 @@
+// Menu de la aplicacion maneja tanto el menu hamburguesa como el side bar
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../App.css";

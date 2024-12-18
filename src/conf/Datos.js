@@ -1,4 +1,5 @@
 
+// Direcciones php para posteriormente hacer las llamadas
 export const PHPCATEGORIA = "https://flashburger.alwaysdata.net/php/FuncionesPHP/consultacatalogo.php";
 export const PHPSENTENCIAS = "https://flashburger.alwaysdata.net/php/FuncionesPHP/consultaproductos.php";
 export const PHPEDIDOS = "https://flashburger.alwaysdata.net/php/FuncionesPHP/crearpedido.php";

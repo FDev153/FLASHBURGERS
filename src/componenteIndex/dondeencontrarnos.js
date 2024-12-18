@@ -1,3 +1,4 @@
+//Seccion donde encontrarnos de la pagina principal
 import './menu.css';
 import Mapa from "./mapa/mapa";
 const DondeEncontrarnos = () => {

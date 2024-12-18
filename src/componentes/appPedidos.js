@@ -1,4 +1,4 @@
-// '../App.css';
+// Componente principal de la aplicación donde estan la mayorias de funciones y componentes agrupados
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Component } from 'react';

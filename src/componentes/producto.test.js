@@ -46,7 +46,7 @@ describe('Producto', () => {
   test('el acordeón de ingredientes no se muestra para ciertas categorías', () => {
     render(<Producto {...mockProps} id_cat={3} />);
 
-    // Verificar que no se renderiza el acordeón
+    // Verificar que no se renderiza el listado de ingredientes inicialmente
     expect(screen.queryByText('Ver ingredientes')).not.toBeInTheDocument();
   });
 });

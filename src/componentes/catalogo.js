@@ -1,3 +1,4 @@
+// Lista de productos y funcion de añadir producto
 import React, { useEffect, useState } from 'react';
 import { CardGroup } from 'reactstrap';
 import Producto from './producto';

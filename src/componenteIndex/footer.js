@@ -1,3 +1,4 @@
+// Pie de la pagina principal
 import React from "react";
 import './menu.css';
 
